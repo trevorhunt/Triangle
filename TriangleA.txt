@@ -1,0 +1,82 @@
+package triangle;
+//Trevor Hunt
+import java.util.Scanner;//import scanner
+import java.lang.Math;
+public class Triangle {
+	Triangleb trianglebObject = new Triangleb();
+	private int x1;
+	private int x2;
+	private int x3;
+	private int y1;
+	private int y2;
+	private int y3;
+	private double side1;
+	private double side2;
+	private double side3;
+	private double p;
+	private double a;
+	
+	double getx1() {//accessors
+		return x1;
+	}
+	double getx2() {
+		return x1;
+	}
+	double getx3() {
+		return x1;
+	}
+	double gety1() {
+		return x1;
+	}
+	double gety2() {
+		return x1;
+	}
+	double gety3() {
+		return x1;
+	}
+	void setx1(int input){//mutators
+		x1 = input;
+	}
+	void setx2(int input){
+		x2 = input;
+	}
+	void setx3(int input){
+		x3 = input;
+	}
+	void sety1(int input){
+		y1 = input;
+	}
+	void sety2(int input){
+		y2 = input;
+	}
+	void sety3(int input){
+		y3 = input;
+	}
+	double getSide1(){//calculate and return side lengths
+		side1 = Math.sqrt((Math.pow((x2-x1), 2) + Math.pow((y2-y1), 2)));
+		return side1;
+	}
+	double getSide2(){
+		side2 = Math.sqrt((Math.pow((x3-x2), 2) + Math.pow((y3-y2), 2)));
+		return side2;
+	}
+	double getSide3(){
+		side3 = Math.sqrt((Math.pow((x1-x3), 2) + Math.pow((y1-y3), 2)));
+		return side3;
+	}
+	
+	double getPerimeter() {	//calculate and return perimeter
+		p=side1+side2+side3;
+		return p;
+	}
+	
+	public double getArea() {//calculate and return area
+		a = Math.sqrt(p/2*(p/2 - side1)*(p/2 - side2)*(p/2 - side3));
+		return a;
+	}
+	
+	public String toString() {//return vertices
+		String result = "Triangle vertices are:\nPoint 1: (" + Integer.toString(x1) + "," + Integer.toString(y1) + "), (" + Integer.toString(x2) + "," + Integer.toString(y2) + "), (" + Integer.toString(x3) + "," + Integer.toString(y3) + ")";
+		return result;
+	}
+}
