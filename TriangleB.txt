@@ -1,0 +1,26 @@
+package triangle;
+//Trevor Hunt
+import java.util.Scanner;//import scanner
+public class Triangleb {
+	public static void main(String[]args) {
+		Scanner scan = new Scanner(System.in);//create scanner object
+		Triangle triangleObject = new Triangle();
+		System.out.println("Enter the first vertex's x value:");//ask user for value
+		triangleObject.setx1(scan.nextInt());//accept response
+		System.out.println("Enter the first vertex's y value:");//ask user for response
+		triangleObject.sety1(scan.nextInt());//accept response
+		System.out.println("Enter the second vertex's x value:");//ask user for response
+		triangleObject.setx2(scan.nextInt());//accept response
+		System.out.println("Enter the second vertex's y value:");//ask user for response
+		triangleObject.sety2(scan.nextInt());//accept response
+		System.out.println("Enter the third vertex's x value:");//ask user for response
+		triangleObject.setx3(scan.nextInt());//accept response
+		System.out.println("Enter the third vertex's y value:");//ask user for response
+		triangleObject.sety3(scan.nextInt());//accept response
+		
+		System.out.println(triangleObject.toString());
+		System.out.println("The triangle's sides are:" + Math.round(triangleObject.getSide1()*100.0)/100.0 + "," + Math.round(triangleObject.getSide2()*100.0)/100.0 + "," + Math.round(triangleObject.getSide3()*100.0)/100.0);
+		System.out.println("The triangle's perimeter:" + Math.round(triangleObject.getPerimeter()*100.0)/100.0);
+		System.out.println("The triangle's area:" + Math.round(triangleObject.getArea()*100.0)/100.0);
+	}
+}
